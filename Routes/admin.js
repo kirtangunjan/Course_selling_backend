@@ -1,5 +1,7 @@
 const {Router}=require("express");
 const adminRouter=Router()
+
+
 const {adminModel, courseModel}=require("../Model/db");
 const jwt=require("jsonwebtoken");
 const bcrypt=require('bcrypt');
@@ -58,7 +60,6 @@ adminRouter.post("/create-course",adminmiddleware,async (req,res)=>{
         imageUrl:imageUrl,
         price:price,
         createrId:adminId
-
     });
     
 
